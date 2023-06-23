@@ -1,51 +1,69 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TrainingController!{% endblock %}
+{% block title %}Training{% endblock %}
 
 {% block body %}
 
 <style>
     .Training-Container{
-        width: 90vw;
-        height: 80vh;
-        background-color: #D8D8D8;
-        border-radius: 5px;
-        margin: auto;
     }
     .Trainees{
         width: 90vw;
-        height: 70vh;
+        height:100vh;
+        background-color: #D8D8D8;
+        border-radius: 5px;
+        margin: auto;
+        overflow-y: auto
     }
     .Training-Container-Header label{
         width: 45vw;
         text-align: center;
         font-size: 3vh
     }
-    
+    .Training-Container-Header{
+        width: 90vw;
+        height:10vh;
+    }
     .Training-Container-Header > *{
         float: left;
     }
+    .Trainees > div {
+        float: left;
+        margin-left:2vw;
+        margin-top:2vh;
+    }
 </style>
 
-<div class="example-wrapper">
     <div class="Training-Container">
         <div class="Training-Container-Header">
-        
-            <label>Training</label>
-            
-            <form class="d-flex" role="search">
-
-                <a type="button" class="btn btn-outline-primary" href="/training/add">Add</a>
-
-                
-                <input class="form-control me-2" type="search" placeholder="Search CID" aria-label="Search">
+            <form class="d-flex" role="search" style="translate:65vw 2vh">
+                <input class="form-control me-2" style="border:1px solid grey" type="search" placeholder="Search CID" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
+                <a type="button" style="translate:1vw" class="btn btn-outline-primary" href="/training/add/">Add</a>
             </form>
 
         </div>
-        <div class="Trainees"></div>
+        <div class="Trainees">
+            {% for trainee in trainees %}
+                
+                <div class="card" style="width: 15vw;height:55vh">
+                    <img class="card-img-top" src="https://cdn.discordapp.com/attachments/1096638485458337883/1121135167390625892/Maghreb_vACC_mini.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{trainee.Name}}</h5>
+                        <p class="card-text"> CID : {{trainee.CID}}</p>
+                        <p class="card-text"> Rating : {{trainee.Rating}}</p>
+                        <p class="card-text">Mentor : {{trainee.Mentor}}</p>
+                        <div style="width:10vw; margin:auto;">
+                            <a href="#" class="btn btn-primary">Modify</a>
+                            <a href="/training/delete/{{trainee.id}}" class="btn btn-danger">Delete</a>
+                        </div>
+                    </div>
+                </div>
 
-        <nav aria-label="Page navigation example">
+            {% endfor %}
+        </div>
+
+        {# <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                 <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -53,8 +71,10 @@
                 <li class="page-item"><a class="page-link" href="#">3</a></li>
                 <li class="page-item"><a class="page-link" href="#">Next</a></li>
             </ul>
-        </nav>
+        </nav> #}
     </div>
-</div>
+
 
 {% endblock %}
+
+

@@ -22,6 +22,12 @@ class Trainee
     #[ORM\Column(length: 255)]
     private ?string $Comment = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $Mentor = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Name = null;
+
     
     // ID --------------------------------
     public function getId(): ?int
@@ -55,6 +61,19 @@ class Trainee
         return $this;
     }
 
+    // Mentor --------------------------------
+    public function getMentor(): ?string
+    {
+        return $this->Mentor;
+    }
+
+    public function setMentor(string $Mentor): static
+    {
+        $this->Mentor = $Mentor;
+
+        return $this;
+    }
+
     // Comments --------------------------------
     public function getComment(): ?string
     {
@@ -64,6 +83,18 @@ class Trainee
     public function setComment(string $Comment): static
     {
         $this->Comment = $Comment;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->Name;
+    }
+
+    public function setName(string $Name): static
+    {
+        $this->Name = $Name;
 
         return $this;
     }

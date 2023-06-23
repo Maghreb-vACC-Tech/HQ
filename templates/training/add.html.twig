@@ -1,28 +1,58 @@
-{% extends 'base.html.twig' %}
+{# {% extends 'base.html.twig' %} #}
 
-{% block title %}Hello TrainingController!{% endblock %}
+
+
+
+{% block stylesheets %}
+    {# {{ parent() }} #}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
+
+
+    <style>
+        #trainee{
+            width: 50vw;
+            height: auto;
+            margin: auto;
+            translate: 0 10vh
+        }
+        #trainee_Rating{
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+        }
+        #trainee_Mentor{
+            width: 100%;
+            height: calc(1.5em + .75rem + 2px);
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+        }
+    </style>
+{% endblock %}
+
+
+
+
 
 {% block body %}
 
+    {{(form(form))}}
 
-<div class="example-wrapper">
-    <form>
-        <p>CID :</p>
-        <input type="text" placeholder="CID"></input>
-        <p>Rating : </p>
-        <select>
-            <option value="S1" selected>OBS</option>
-            <option value="S1" >S1</option>
-            <option value="S1" >S2</option>
-            <option value="S1" >S3</option>
-            <option value="S1" >C1</option>
-        </select>
-        <p>Comment :</p>
-        <input type="text" placeholder="Comment"></input>
-        <input type="submit"></input>
-    
-    </form>
-
-</div>
 
 {% endblock %}
