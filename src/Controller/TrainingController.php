@@ -4,8 +4,9 @@ namespace App\Controller;
 
 // Use Entities
 use App\Entity\Trainee;
+use App\Form\ModifyTraineeType;
 use App\Form\TraineeType;
-
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Doctrine\Persistence\ManagerRegistry;
 use Symfony\Component\HttpFoundation\Request;
@@ -77,6 +78,7 @@ class TrainingController extends AbstractController
             'trainee' => $trainee,
             'form' => $form->createView()
         ]);
+        
     }
 
 
@@ -84,24 +86,19 @@ class TrainingController extends AbstractController
 
 //////////////////////////////////////Delete trainees////////////////////////////////////////////////
 
-    #[Route('/training/delete/{CID}/{Name}/{Rating}/{Mentor}/{Comment}', name: 'app_training_delete')]
-    public function DeleteTrainee(Trainee $trainee = null ,ManagerRegistry $doctrine ,$CID ,$Name ,$Rating ,$Mentor ,$Comment): Response
+    #[Route('/training/delete/{id}', name: 'app_training_delete')]
+    public function DeleteTrainee(Trainee $trainee = null ,EntityManagerInterface $entityManager): Response
     {
 
         if ($trainee){
 
+            // $manager = $entityManager -> getManager(); 
 
             // Add transaction 
-            $trainee -> setCID($CID);
-            $trainee -> setName($Name);
-            $trainee -> setRating($Rating);
-            $trainee -> setMentor($Mentor);
-            $trainee -> setComment($Comment);
+            $entityManager -> remove($trainee);
 
-            $manager = $doctrine -> getManager(); 
-            $manager -> persist($trainee);
-
-            $manager -> flush();
+            $entityManager -> flush();
+            
 
         }
         else {
@@ -121,19 +118,55 @@ class TrainingController extends AbstractController
 //////////////////////////////////////Modify trainees////////////////////////////////////////////////
 
     #[Route('/training/Modify/{id}', name: 'app_training_modify')]
-    public function ModifyTrainee(ManagerRegistry $doctrine): Response
+    public function ModifyTrainee(Trainee $trainee = null ,Request $request ,ManagerRegistry $doctrine ,$id): Response
     {
 
-        $repository = $doctrine->getRepository(Trainee::class);
-        $trainees = $repository -> findAll();
+        $trainee = new Trainee();
 
-        return $this->render('training/index.html.twig', [
-            'trainees' => $trainees,
+    
+        
+        $entityManager = $doctrine -> getManager(); 
+
+        $trainee = $entityManager->getRepository(Trainee::class)->find($id);
+
+        $form = $this->createForm(ModifyTraineeType::class, $trainee);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $entityManager->flush();
+    
+            return $this->redirectToRoute('app_training');
+        }
+        $trainee = $trainee -> getCID();
+        
+
+        return $this->render('training/modify.html.twig', [
+            'trainee' => $trainee,
+            'form' => $form->createView(),
         ]);
+
+    } 
+
+
+//////////////////////////////////////Search trainees////////////////////////////////////////////////
+
+    // #[Route('/training/find/{cid}', name: 'app_training_find')]
+    // public function FindTrainee($cid,Trainee $trainee = null ,Request $request ,ManagerRegistry $doctrine): Response
+    // {
+
+    //     $repository = $doctrine->getRepository(Trainee::class);
+    //     // $trainees = $repository -> findb();
+    //     // $trainee = $repository->find();
+    //     $trainee = $repository->findBy(['CID' => $cid]);
+
+    //     return $this->render('training/index.html.twig', [
+    //         'trainees' => $trainee,
+    //     ]);
 
 
         
-    } 
+    // }   
+
 
 
 }

@@ -38,7 +38,8 @@
         <div class="Training-Container-Header">
             <form class="d-flex" role="search" style="translate:65vw 2vh">
                 <input class="form-control me-2" style="border:1px solid grey" type="search" placeholder="Search CID" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+                <a class="btn btn-outline-success" href="#" type="submit">Search</a>
+                {# //training/find/1444212 #}
                 <a type="button" style="translate:1vw" class="btn btn-outline-primary" href="/training/add/">Add</a>
             </form>
 
@@ -53,9 +54,9 @@
                         <p class="card-text"> CID : {{trainee.CID}}</p>
                         <p class="card-text"> Rating : {{trainee.Rating}}</p>
                         <p class="card-text">Mentor : {{trainee.Mentor}}</p>
-                        <div style="width:10vw; margin:auto;">
-                            <a href="#" class="btn btn-primary">Modify</a>
-                            <a href="/training/delete/{{trainee.id}}" class="btn btn-danger">Delete</a>
+                        <div style="width:15vw; margin:auto;">
+                            <a href="/training/Modify/{{trainee.id}}/" class="btn btn-primary">Modify</a>
+                            <a href="/training/delete/{{trainee.id}}/" class="btn btn-danger">Delete</a>
                         </div>
                     </div>
                 </div>
