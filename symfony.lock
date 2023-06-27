@@ -26,6 +26,9 @@
             "./migrations/.gitignore"
         ]
     },
+    "mercuryseries/flashy-bundle": {
+        "version": "v5.1.0"
+    },
     "symfony/console": {
         "version": "6.3",
         "recipe": {

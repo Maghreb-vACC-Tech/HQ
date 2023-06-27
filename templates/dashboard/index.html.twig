@@ -8,50 +8,110 @@
 
 
 <style>
+    .example-wrapper{
+      width:100vw;
+    }
     .example-wrapper > div{
         display: inline-block;
+        float: left;
         margin-left: 7vw;
         margin-top: 5vh;
     }
-    .Controllers-Online{
-        width:40vw;
-        height:50vh;
-        background-color: #D8D8D8;    
-        margin:auto;
-        border-radius:5px;
-    }
-    .Controllers-Online-Title{
-        width:35vw;
-        margin:auto;
-        height:7vh;
+    {# Controllers Styles #}
+      .Controllers-Online{
+          width:40vw;
+          height:50vh;
+          background-color: #D8D8D8;    
+          margin:auto;
+          border-radius:5px;
+      }
+      .Controllers-Online-Title{
+          width:35vw;
+          margin:auto;
+          height:7vh;
 
-    }
-    .Controllers-Online-Title > div{
-        width:11.6vw;
-        height:7vh;
+      }
+      .Controllers-Online-Title > div{
+          width:11.6vw;
+          height:7vh;
+          float:left;
+          text-align:center;
+          padding-top:1vh;
+          border-bottom: 1px solid white;
+      }
+      .Controllers-Online-Content{
+          width:35vw;
+          height:7vh;
+          border-bottom: 1px solid white;
+          margin:auto;
+          margin-top:1vh;
+      }
+      .Controllers-Online-Content > div{
+          width:11.6vw;
+          height:7vh;
+          margin:auto;
+          float:left;
+          text-align:center;
+          padding-top:1vh;
+      }
+
+    {# Controllers Styles #}
+      .Announcement{
+          width:87vw;
+          height:50vh;
+          background-color: #D8D8D8;    
+          margin:auto;
+          border-radius:5px;
+      }
+      .Announcement-Online-Title{
+          width:87vw;
+          margin:auto;
+          height:7vh;
+      }
+      
+      .Announcement-Online-Title > div{
+          height:7vh;
+          float:left;
+          text-align:center;
+          padding-top:1vh;
+          border-bottom: 1px solid white;
+          margin:auto;
+      }
+
+      
+      .Announcement-Online-Container{
+          width:87vw;
+          margin:auto;
+          height:7vh;
+      }
+
+      .Announcement-Online-Content > div {
         float:left;
+        padding-top:3vh;
         text-align:center;
-        padding-top:1vh;
-        border-bottom: 1px solid white;
-    }
-    .Controllers-Online-Content{
-        width:35vw;
-        height:7vh;
-        border-bottom: 1px solid white;
-        margin:auto;
-        margin-top:1vh;
-    }
-    .Controllers-Online-Content > div{
-        width:11.6vw;
-        height:7vh;
-        margin:auto;
-        float:left;
-        text-align:center;
-        padding-top:1vh;
-        }
+      }
+
 </style>
 
 <div class="example-wrapper">
+
+    <div class="Announcement">
+        <h1 style="font-size:3vh;text-align:left;padding:3vh;padding-left:3vw">Announcement</h1>
+        
+        <div class="Announcement-Online-Title">
+            <div style="width:13vw;translate:1vw"><p>From</p></div>
+            <div style="width:70vw;float:right;translate:-1vw"><p>Message</p></div>
+        </div>
+
+        
+        <div class="Announcement-Online-Container"  style="width:100%;height:30vh;overflow-y:auto;overflow-x:hidden;margin:auto">
+            <div class="Announcement-Online-Content"  style="width:100%;min-height:10vh;height:auto">
+              <div style="width:13vw;translate:1vw"><p>Ilyass B</p></div>
+              <div style="width:70vw;float:right;translate:-1vw"><p>Message</p></div>
+            </div>
+        </div>
+    </div>
+
 
 
     <div class="Controllers-Online">
@@ -64,24 +124,8 @@
             <div><p>CID</p></div>
         </div>
 
-        <div style="width:35vw;height:40vh;overflow-y:auto;margin:auto">
-            <div class="Controllers-Online-Content">
-                <div class="Controllers-Online-Content-Position"><p>GMMN_TWR</p></div>
-                <div class="Controllers-Online-Content-Name"><p>Ilyass</p></div>
-                <div class="Controllers-Online-Content-CID"><p>1674212</p></div>
-            </div>
+        <div class="Controllers-Online-Container" style="width:35vw;height:30vh;overflow-y:auto;overflow-x:hidden;margin:auto">
 
-            <div class="Controllers-Online-Content">
-                <div class="Controllers-Online-Content-Position"><p>GMMN_TWR</p></div>
-                <div class="Controllers-Online-Content-Name"><p>Ilyass</p></div>
-                <div class="Controllers-Online-Content-CID"><p>1674212</p></div>
-            </div>
-
-            <div class="Controllers-Online-Content">
-                <div class="Controllers-Online-Content-Position"><p>GMMN_TWR</p></div>
-                <div class="Controllers-Online-Content-Name"><p>Ilyass</p></div>
-                <div class="Controllers-Online-Content-CID"><p>1674212</p></div>
-            </div>
         </div>
         
     </div>
@@ -97,19 +141,7 @@
             <div><p>CID</p></div>
         </div>
 
-        <div style="width:35vw;height:40vh;overflow-y:auto;margin:auto">
-            <div class="Controllers-Online-Content">
-                <div class="Controllers-Online-Content-Position"><p>GMMN_TWR</p></div>
-                <div class="Controllers-Online-Content-Name"><p>Ilyass</p></div>
-                <div class="Controllers-Online-Content-CID"><p>1674212</p></div>
-            </div>
-
-            <div class="Controllers-Online-Content">
-                <div class="Controllers-Online-Content-Position"><p>GMMN_TWR</p></div>
-                <div class="Controllers-Online-Content-Name"><p>Ilyass</p></div>
-                <div class="Controllers-Online-Content-CID"><p>1674212</p></div>
-            </div>
-
+        <div style="width:35vw;height:30vh;overflow-y:auto;overflow-x:hidden;margin:auto">
             <div class="Controllers-Online-Content">
                 <div class="Controllers-Online-Content-Position"><p>GMMN_TWR</p></div>
                 <div class="Controllers-Online-Content-Name"><p>Ilyass</p></div>
@@ -123,15 +155,70 @@
 {# ATC ACTIVITY SCRIPT #}
 {% block scripts %}
     <script>
-                
+
+    function Controller_Online_Container_Builder(Position , Name  , CID  ) {
+      console.log("Controller_Online_Container_Builder")
+      // create elements 
+      let divParent = document.createElement('div');
+
+      let divChildPosition = document.createElement('div');
+      let divChildName = document.createElement('div');
+      let divChildCID = document.createElement('div');
+
+      let pPosition = document.createElement('p');
+      let pName = document.createElement('p');
+      let pCID = document.createElement('p');
+
+      //assigning text to p elements
+        pPosition.innerHTML = CID;
+        pName.innerHTML = Name;
+        pCID.innerHTML = Position;
+
+      //assign class to elements
+        divParent.classList.add('Controllers-Online-Content');
+        divParent.classList.add(CID);
+
+        divChildPosition.classList.add('Controllers-Online-Content-Position');
+        divChildName.classList.add('Controllers-Online-Content-Name');
+        divChildCID.classList.add('Controllers-Online-Content-CID');
+
+      // append child to parent
+        divParent.appendChild(divChildPosition);
+        divParent.appendChild(divChildName);
+        divParent.appendChild(divChildCID);
+        
+        divChildPosition.appendChild(pPosition);
+        divChildName.appendChild(pName);
+        divChildCID.appendChild(pCID);
+
+        document.querySelector('.Controllers-Online-Container').appendChild(divParent);
+        console.log("Controller_Online_Container_Builder")
+    }
+    
+    function Controller_Online_Container_Destroyer(CID) {
+      //try{
+      let parentElement = document.querySelector(".Controllers-Online-Container");
+      let childElement = document.querySelector(`.${CID}`);
+      
+      parentElement.removeChild(childElement);
+      /*}
+      catch{
+        console.log(CID)
+      }*/
+    }
+
+
         let previousCallsigns = [];
         console.log('Ready!');
                 
-        setInterval(() => {
-    try {
-      fetch('https://data.vatsim.net/v3/vatsim-data.json', { timeout: 30000 })
-        .then(data => data.json())
-        .then(response => {
+
+
+setInterval(() => {
+  try {
+    fetch('https://data.vatsim.net/v3/vatsim-data.json', { timeout: 30000 })
+      .then(data => data.json())
+      .then(response => {
+        if (response.controllers) { // check if the property exists
           const filteredResponse = response.controllers.filter(item =>
             /^(DAAA|DAAD|DAAE|DAAG|DAAJ|DAAK|DAAP|DAAS|DAAT|DAAV|DABB|DABC|DABS|DABT|DAOB|DAOF|DAOI|DAOL|DAON|DAOO|DAOR|DAOV|DAOY|DATG|DATM|DAUA|DAUB|DAUE|DAUG|DAUH|DAUI|DAUK|DAUO|DAUT|DAUU|DAUZ|DTTC|DTKA|DTMB|DTNH|DTTA|DTTB|DTTF|DTTG|DTTI|DTTJ|DTTX|DTTZ|GMMM|GMAC|GMAD|GMAG|GMAT|GMAZ|GMFB|GMFF|GMFI|GMFK|GMFM|GMFO|GMFZ|GMMA|GMMB|GMMD|GMME|GMMH|GMMI|GMML|GMMN|GMMT|GMMW|GMMX|GMMZ|GMTA|GMTN|GMTT)/.test(item.callsign)
           )
@@ -146,50 +233,52 @@
           const onlineCallsigns = currentCallsigns.filter(current => !previousCallsigns.some(prev => prev.callsigned === current.callsigned && prev.cid === current.cid));
           const offlineCallsigns = previousCallsigns.filter(prev => !currentCallsigns.some(current => current.callsigned === prev.callsigned && current.cid === prev.cid));
 
-          offlineCallsigns.forEach(callsign => {
-            console.log(callsign.callsigned)
-            console.log(callsign.user)
-            console.log(callsign.cid)
-          });
-          onlineCallsigns.forEach(callsign => {
-            // Check if the frequency is equal to "199.998"
-            if (callsign.frequency === "199.998") {
-              // Set up an event listener to detect changes in the frequency
-              const checkFrequency = setInterval(() => {
-                fetch('https://data.vatsim.net/v3/vatsim-data.json')
-                  .then(response => response.json())
-                  .then(data => {
-                    const filteredResponse = data.clients.filter(client => client.frequency === callsign.frequency && client.callsign === callsign.callsigned);
-                    if (filteredResponse.length > 0) {
-                      // The frequency has changed, so send the Discord message and clear the event listener
-                        console.log(callsign.callsigned)
-                        console.log(callsign.user)
-                        console.log(callsign.cid)
-                    }
-                  })
-                  .catch(error => {
-                    console.error(error);
-                  });
-              }, 10000);
-            } else {
-              // The frequency is already set, so send the Discord message immediately
-                console.log(callsign.callsigned)
-                console.log(callsign.user)
-                console.log(callsign.cid)
-            }
-          });
+                offlineCallsigns.forEach(callsign => {
+                  console.log(callsign.callsigned)
+                  console.log(callsign.user)
+                  console.log(callsign.cid)
+                  Controller_Online_Container_Destroyer(callsign.callsigned)
+                });
+                onlineCallsigns.forEach(callsign => {
+                  // Check if the frequency is equal to "199.998"
+                  if (callsign.frequency === "199.998") {
+                    // Set up an event listener to detect changes in the frequency
+                    const checkFrequency = setInterval(() => {
+                      fetch('https://data.vatsim.net/v3/vatsim-data.json')
+                        .then(response => response.json())
+                        .then(data => {
+                          const filteredResponse = data.clients.filter(client => client.frequency === callsign.frequency && client.callsign === callsign.callsigned);
+                          if (filteredResponse.length > 0) {
+                            // The frequency has changed, so send the Discord message and clear the event listener
+                              console.log(callsign.callsigned)
+                              console.log(callsign.user)
+                              console.log(callsign.cid)
+                            Controller_Online_Container_Builder(callsign.cid , callsign.user , callsign.callsigned)//smtg wrong with variables name but it works
+                          }
+                        })
+                        .catch(error => {
+                          console.error(error);
+                        });
+                    }, 10000);
+                  } else {
+                    // The frequency is already set, so send the Discord message immediately
+                      console.log(callsign.callsigned)
+                      console.log(callsign.user)
+                      console.log(callsign.cid)
+                      Controller_Online_Container_Builder(callsign.cid , callsign.user , callsign.callsigned)//smtg wrong with variables name but it works
+                  }
+                });
 
-          previousCallsigns = currentCallsigns;
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    } catch (error) {
-      console.error(error);
-    }
-  }, 10000);
-
-
+                previousCallsigns = currentCallsigns;
+        }
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  } catch (error) {
+    console.error(error);
+  }
+}, 10000);
 
     </script>
 {% endblock %}
