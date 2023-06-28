@@ -151,16 +151,16 @@ class TrainingController extends AbstractController
 //////////////////////////////////////Search trainees////////////////////////////////////////////////
 
     // #[Route('/training/find/{cid}', name: 'app_training_find')]
-    // public function FindTrainee($cid,Trainee $trainee = null ,Request $request ,ManagerRegistry $doctrine): Response
+    // public function FindTrainee($cid ,Request $request ,ManagerRegistry $doctrine): Response
     // {
 
     //     $repository = $doctrine->getRepository(Trainee::class);
-    //     // $trainees = $repository -> findb();
-    //     // $trainee = $repository->find();
-    //     $trainee = $repository->findBy(['CID' => $cid]);
+    //     // $trainees = $repository -> findBy(['cid' => $cid]);
+    //     $trainees = $repository -> findAll();
 
     //     return $this->render('training/index.html.twig', [
-    //         'trainees' => $trainee,
+    //         'trainees' => $trainees,
+    //         'cid' => $cid,
     //     ]);
 
 

@@ -21,10 +21,12 @@
       .Controllers-Online{
           width:40vw;
           height:50vh;
-          background-color: #D8D8D8;    
+          background-color: #5E8DAE;    
           margin:auto;
+          color: #fff;
           border-radius:5px;
-      }
+          transition: all 0.3s ease;
+      }      
       .Controllers-Online-Title{
           width:35vw;
           margin:auto;
@@ -55,32 +57,19 @@
           padding-top:1vh;
       }
 
-    {# Controllers Styles #}
+    {# Announcement Styles #}
+
       .Announcement{
           width:87vw;
-          height:50vh;
-          background-color: #D8D8D8;    
+          height:60vh;
+          background-color: #6F9FA4;    
           margin:auto;
           border-radius:5px;
+          color:white;
       }
-      .Announcement-Online-Title{
-          width:87vw;
-          margin:auto;
-          height:7vh;
-      }
-      
-      .Announcement-Online-Title > div{
-          height:7vh;
-          float:left;
-          text-align:center;
-          padding-top:1vh;
-          border-bottom: 1px solid white;
-          margin:auto;
-      }
-
       
       .Announcement-Online-Container{
-          width:87vw;
+          width:100%;
           margin:auto;
           height:7vh;
       }
@@ -91,28 +80,110 @@
         text-align:center;
       }
 
+      .Announcement-Online-Content > div > h1{
+        float:left;
+        font-size:3vh;
+        translate: 9vw;
+      }
+
+      .Announcement-Online-Content > div > span{
+        float:right;
+        font-size:2vh;
+        translate: -9vw;
+      }
+
+      
+      .Announcement-Online-Content > div > h2{
+        float:left;
+        font-size:2vh;
+        translate: 2vw;
+        text-align:left;
+      }
+
+      .Announcement-Online-Content > div > p{
+        font-size:2vh;
+        width:80%;
+        height:70%;
+        margin:auto;
+        text-align:left;
+      }
+
+
+    {# Booking #}
+
+      .Booking-Online{
+          width:40vw;
+          height:50vh;
+          background-color: #D16C6C;    
+          margin:auto;
+          color: #fff;
+          border-radius:5px;
+          transition: all 0.3s ease;
+      }      
+      .Booking-Online-Title{
+          width:35vw;
+          margin:auto;
+          height:7vh;
+
+      }
+      .Booking-Online-Title > div{
+          width:11.6vw;
+          height:7vh;
+          float:left;
+          text-align:center;
+          padding-top:1vh;
+          border-bottom: 1px solid white;
+      }
+      .Booking-Online-Content{
+          width:35vw;
+          height:7vh;
+          border-bottom: 1px solid white;
+          margin:auto;
+          margin-top:1vh;
+      }
+      .Booking-Online-Content > div{
+          width:11.6vw;
+          height:7vh;
+          margin:auto;
+          float:left;
+          text-align:center;
+          padding-top:1vh;
+      }
+
 </style>
 
 <div class="example-wrapper">
 
     <div class="Announcement">
-        <h1 style="font-size:3vh;text-align:left;padding:3vh;padding-left:3vw">Announcement</h1>
+        <h1 style="font-size:3vh;text-align:center;padding:3vh;">Latest Announcement</h1>
         
-        <div class="Announcement-Online-Title">
-            <div style="width:13vw;translate:1vw"><p>From</p></div>
-            <div style="width:70vw;float:right;translate:-1vw"><p>Message</p></div>
-        </div>
 
         
-        <div class="Announcement-Online-Container"  style="width:100%;height:30vh;overflow-y:auto;overflow-x:hidden;margin:auto">
-            <div class="Announcement-Online-Content"  style="width:100%;min-height:10vh;height:auto">
-              <div style="width:13vw;translate:1vw"><p>Ilyass B</p></div>
-              <div style="width:70vw;float:right;translate:-1vw"><p>Message</p></div>
+        <div class="Announcement-Online-Container"  style="width:100%;height:38vh;overflow-y:auto;overflow-x:hidden;margin:auto">
+            <div class="Announcement-Online-Content"  style="width:100%;min-height:10vh;height:auto;">
+              <div style="width:100%;"><h1>Reda F.</h1><span>Tuesday 27th, June 23:02</span></div>
+              <div style="width:100%;">
+                <p>
+                Hello Everyone,</br>
+                On this joyous occasion of Eid Al-Adha and on behalf of the Maghreb vACC @Staff, I wanted to extend my warmest wishes to each and every one of you 😇
+
+                  Eid Al-Adha is a time for reflection, gratitude, and togetherness. It is a reminder of the values of sacrifice, unity, and compassion. As members of the Maghreb vACC community, you exemplify these virtues through your dedication, teamwork, and commitment 😉
+                  As you come together with your loved ones, friends and community to celebrate this auspicious occasion, I hope you find solace in the joyous moments, cherish the company of your loved ones, and create lasting memories.
+
+                  May Allah the almighty fill your lives with happiness, contentment, and success. May the the blessings of Eid Al-Adha brings you closer to your goals and aspirations, and strengthen the bonds of friendship in your real lives and within our community 😀
+
+                  Wishing you all a joyous Eid filled with laughter, love, and prosperity. 
+
+                  Eid Mubarak
+                </p>
+
+              </div>
             </div>
         </div>
     </div>
 
-
+    
+ 
 
     <div class="Controllers-Online">
 
@@ -131,21 +202,21 @@
     </div>
     
     
-    <div class="Controllers-Online">
+    <div class="Booking-Online">
 
         <h1 style="font-size:3vh;text-align:center;padding:2vh">Todays Bookings</h1>
 
-        <div class="Controllers-Online-Title">
+        <div class="Booking-Online-Title">
             <div><p>Position</p></div>
-            <div><p>Name</p></div>
-            <div><p>CID</p></div>
+            <div><p>Mentor</p></div>
+            <div><p>Time</p></div>
         </div>
 
         <div style="width:35vw;height:30vh;overflow-y:auto;overflow-x:hidden;margin:auto">
-            <div class="Controllers-Online-Content">
-                <div class="Controllers-Online-Content-Position"><p>GMMN_TWR</p></div>
-                <div class="Controllers-Online-Content-Name"><p>Ilyass</p></div>
-                <div class="Controllers-Online-Content-CID"><p>1674212</p></div>
+            <div class="Booking-Online-Content">
+                <div class="Booking-Online-Content-Position"><p>GMMN_TWR</p></div>
+                <div class="Booking-Online-Content-Name"><p>Ilyass B.</p></div>
+                <div class="Booking-Online-Content-CID"><p>18:30z <i class="fa-solid fa-arrow-right" style="font-size:1.5vh"></i> 20:30z</p></div>
             </div>
         </div>
         
@@ -213,72 +284,72 @@
                 
 
 
-setInterval(() => {
-  try {
-    fetch('https://data.vatsim.net/v3/vatsim-data.json', { timeout: 30000 })
-      .then(data => data.json())
-      .then(response => {
-        if (response.controllers) { // check if the property exists
-          const filteredResponse = response.controllers.filter(item =>
-            /^(DAAA|DAAD|DAAE|DAAG|DAAJ|DAAK|DAAP|DAAS|DAAT|DAAV|DABB|DABC|DABS|DABT|DAOB|DAOF|DAOI|DAOL|DAON|DAOO|DAOR|DAOV|DAOY|DATG|DATM|DAUA|DAUB|DAUE|DAUG|DAUH|DAUI|DAUK|DAUO|DAUT|DAUU|DAUZ|DTTC|DTKA|DTMB|DTNH|DTTA|DTTB|DTTF|DTTG|DTTI|DTTJ|DTTX|DTTZ|GMMM|GMAC|GMAD|GMAG|GMAT|GMAZ|GMFB|GMFF|GMFI|GMFK|GMFM|GMFO|GMFZ|GMMA|GMMB|GMMD|GMME|GMMH|GMMI|GMML|GMMN|GMMT|GMMW|GMMX|GMMZ|GMTA|GMTN|GMTT)/.test(item.callsign)
-          )
-          const currentCallsigns = filteredResponse.map(item => ({
-            callsigned: item.callsign,
-            cid: item.cid,
-            time: item.logon_time,
-            frequency: item.frequency,
-            user: item.name
-          }));
+  setInterval(() => {
+    try {
+      fetch('https://data.vatsim.net/v3/vatsim-data.json', { timeout: 30000 })
+        .then(data => data.json())
+        .then(response => {
+          if (response.controllers) { // check if the property exists
+            const filteredResponse = response.controllers.filter(item =>
+              /^(DAAA|DAAD|DAAE|DAAG|DAAJ|DAAK|DAAP|DAAS|DAAT|DAAV|DABB|DABC|DABS|DABT|DAOB|DAOF|DAOI|DAOL|DAON|DAOO|DAOR|DAOV|DAOY|DATG|DATM|DAUA|DAUB|DAUE|DAUG|DAUH|DAUI|DAUK|DAUO|DAUT|DAUU|DAUZ|DTTC|DTKA|DTMB|DTNH|DTTA|DTTB|DTTF|DTTG|DTTI|DTTJ|DTTX|DTTZ|GMMM|GMAC|GMAD|GMAG|GMAT|GMAZ|GMFB|GMFF|GMFI|GMFK|GMFM|GMFO|GMFZ|GMMA|GMMB|GMMD|GMME|GMMH|GMMI|GMML|GMMN|GMMT|GMMW|GMMX|GMMZ|GMTA|GMTN|GMTT)/.test(item.callsign)
+            )
+            const currentCallsigns = filteredResponse.map(item => ({
+              callsigned: item.callsign,
+              cid: item.cid,
+              time: item.logon_time,
+              frequency: item.frequency,
+              user: item.name
+            }));
 
-          const onlineCallsigns = currentCallsigns.filter(current => !previousCallsigns.some(prev => prev.callsigned === current.callsigned && prev.cid === current.cid));
-          const offlineCallsigns = previousCallsigns.filter(prev => !currentCallsigns.some(current => current.callsigned === prev.callsigned && current.cid === prev.cid));
+            const onlineCallsigns = currentCallsigns.filter(current => !previousCallsigns.some(prev => prev.callsigned === current.callsigned && prev.cid === current.cid));
+            const offlineCallsigns = previousCallsigns.filter(prev => !currentCallsigns.some(current => current.callsigned === prev.callsigned && current.cid === prev.cid));
 
-                offlineCallsigns.forEach(callsign => {
-                  console.log(callsign.callsigned)
-                  console.log(callsign.user)
-                  console.log(callsign.cid)
-                  Controller_Online_Container_Destroyer(callsign.callsigned)
-                });
-                onlineCallsigns.forEach(callsign => {
-                  // Check if the frequency is equal to "199.998"
-                  if (callsign.frequency === "199.998") {
-                    // Set up an event listener to detect changes in the frequency
-                    const checkFrequency = setInterval(() => {
-                      fetch('https://data.vatsim.net/v3/vatsim-data.json')
-                        .then(response => response.json())
-                        .then(data => {
-                          const filteredResponse = data.clients.filter(client => client.frequency === callsign.frequency && client.callsign === callsign.callsigned);
-                          if (filteredResponse.length > 0) {
-                            // The frequency has changed, so send the Discord message and clear the event listener
-                              console.log(callsign.callsigned)
-                              console.log(callsign.user)
-                              console.log(callsign.cid)
-                            Controller_Online_Container_Builder(callsign.cid , callsign.user , callsign.callsigned)//smtg wrong with variables name but it works
-                          }
-                        })
-                        .catch(error => {
-                          console.error(error);
-                        });
-                    }, 10000);
-                  } else {
-                    // The frequency is already set, so send the Discord message immediately
-                      console.log(callsign.callsigned)
-                      console.log(callsign.user)
-                      console.log(callsign.cid)
-                      Controller_Online_Container_Builder(callsign.cid , callsign.user , callsign.callsigned)//smtg wrong with variables name but it works
-                  }
-                });
+                  offlineCallsigns.forEach(callsign => {
+                    console.log(callsign.callsigned)
+                    console.log(callsign.user)
+                    console.log(callsign.cid)
+                    Controller_Online_Container_Destroyer(callsign.callsigned)
+                  });
+                  onlineCallsigns.forEach(callsign => {
+                    // Check if the frequency is equal to "199.998"
+                    if (callsign.frequency === "199.998") {
+                      // Set up an event listener to detect changes in the frequency
+                      const checkFrequency = setInterval(() => {
+                        fetch('https://data.vatsim.net/v3/vatsim-data.json')
+                          .then(response => response.json())
+                          .then(data => {
+                            const filteredResponse = data.clients.filter(client => client.frequency === callsign.frequency && client.callsign === callsign.callsigned);
+                            if (filteredResponse.length > 0) {
+                              // The frequency has changed, so send the Discord message and clear the event listener
+                                console.log(callsign.callsigned)
+                                console.log(callsign.user)
+                                console.log(callsign.cid)
+                              Controller_Online_Container_Builder(callsign.cid , callsign.user , callsign.callsigned)//smtg wrong with variables name but it works
+                            }
+                          })
+                          .catch(error => {
+                            console.error(error);
+                          });
+                      }, 10000);
+                    } else {
+                      // The frequency is already set, so send the Discord message immediately
+                        console.log(callsign.callsigned)
+                        console.log(callsign.user)
+                        console.log(callsign.cid)
+                        Controller_Online_Container_Builder(callsign.cid , callsign.user , callsign.callsigned)//smtg wrong with variables name but it works
+                    }
+                  });
 
-                previousCallsigns = currentCallsigns;
-        }
-      })
-      .catch(error => {
-        console.error(error);
-      });
-  } catch (error) {
-    console.error(error);
-  }
-}, 10000);
+                  previousCallsigns = currentCallsigns;
+          }
+        })
+        .catch(error => {
+          console.error(error);
+        });
+    } catch (error) {
+      console.error(error);
+    }
+  }, 10000);
 
     </script>
 {% endblock %}

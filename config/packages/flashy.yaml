@@ -1,7 +1,0 @@
-flashy:
-    template: 'flashy/semantic.html.twig'
-    options:
-        type: 'info'
-        message: ''
-        keep: false
-        retry: false

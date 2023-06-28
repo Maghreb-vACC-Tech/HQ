@@ -5,41 +5,53 @@
 {% block body %}
 
 <style>
-    .Training-Container{
-    }
-    .Trainees{
-        width: 90vw;
-        height:100vh;
-        background-color: #D8D8D8;
-        border-radius: 5px;
-        margin: auto;
-        overflow-y: auto
-    }
-    .Training-Container-Header label{
-        width: 45vw;
-        text-align: center;
-        font-size: 3vh
-    }
-    .Training-Container-Header{
-        width: 90vw;
-        height:10vh;
-    }
-    .Training-Container-Header > *{
-        float: left;
-    }
-    .Trainees > div {
-        float: left;
-        margin-left:2vw;
-        margin-top:2vh;
-    }
+    {# Training #}
+        .Training-Container{
+        }
+        .Trainees{
+            width: 90vw;
+            height:100vh;
+            background-color: #F1F1F1;
+            border: 1px solid #D1D1D1;
+            border-radius: 5px;
+            margin: auto;
+            overflow-y: auto
+        }
+        .Training-Container-Header label{
+            width: 45vw;
+            text-align: center;
+            font-size: 3vh
+        }
+        .Training-Container-Header{
+            width: 90vw;
+            height:10vh;
+        }
+        .Training-Container-Header > *{
+            float: left;
+        }
+        .Trainees > div {
+            float: left;
+            margin-left:2vw;
+            margin-top:2vh;
+        }
+
+    {# Cards #}
+        .card{
+            transition: all 0.3s ease;
+            
+        }
+        .card:hover{
+            box-shadow: #B9B9B9 5px 5px 30px;
+            transition: all 0.3s ease;
+            transform: scale(1.02)
+        }
 </style>
 
     <div class="Training-Container">
         <div class="Training-Container-Header">
-            <form class="d-flex" role="search" style="translate:65vw 2vh">
+            <form method="/training/find/{cid}" action="" class="d-flex" role="search" style="translate:65vw 2vh">
                 <input class="form-control me-2" style="border:1px solid grey" type="search" placeholder="Search CID" aria-label="Search">
                 <a class="btn btn-outline-success" href="#" type="submit">Search</a>
-                {# //training/find/1444212 #}
                 <a type="button" style="translate:1vw" class="btn btn-outline-primary" href="/training/add/">Add</a>
             </form>
 
@@ -74,7 +86,11 @@
             </ul>
         </nav> #}
     </div>
+    {% block scripts %}
+        <script>
 
+        </script>
+    {% endblock %}
 
 {% endblock %}
 
