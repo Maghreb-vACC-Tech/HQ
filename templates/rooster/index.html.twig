@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello RoosterController!{% endblock %}
+
+{% block body %}
+<style>
+    .Rooster-Container{
+    }
+    .Rooster-Title{
+        width: 90vw;
+        height:10vh;
+    }
+    .Rooster-Title div{
+        float: left;
+    }
+    .Rooster-Title div a{
+        float: left;
+        padding: 2vh;
+        background-color: #A5A5A5;
+        margin:2vh;
+        color:white;
+        text-decoration: none;
+        border-radius:5px;
+        transition: all 0.3s ease;
+        translate:5vw 2vh;
+    }
+    .Rooster-Title div a:hover{
+        background-color: white;
+        color:#A5A5A5;
+        transition: all 0.3s ease;
+    }
+    .Rooster{
+        width: 90vw;
+        height:100vh;
+        background-color: #F1F1F1;
+        border: 1px solid #D1D1D1;
+        border-radius: 5px;
+        margin: auto;
+        overflow-y: auto;
+        margin-top:5vh
+    }
+
+</style>
+
+<div class="example-wrapper"></div>
+
+<div class="Rooster-Container">
+
+    <div class="Rooster-Title">
+
+        <div><a href="#">Approuved ATC</a></div>
+        <div><a href="#">Solo Approvals</a></div>
+        <div><a href="#">Visiting ATC</a></div>
+        <div><a href="#">Examiners & Mentors</a></div>
+        <div><a href="#">Staff</a></div>
+
+    </div>
+    <div class="Rooster">
+
+        
+
+    </div>
+
+</div>
+{% endblock %}
