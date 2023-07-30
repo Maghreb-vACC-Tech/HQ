@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BookingController!{% endblock %}
+
+{% block body %}
+<style>
+.booking-Container{
+    width:90vw;
+    height:80vh;
+    background-color: #F1F1F1;
+    border: 1px solid #D1D1D1;
+    border-radius: 5px;
+    margin: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    translate : 0 2vh
+}
+.booking-Container > div{
+    width:90vw;
+    height:10vh;
+    padding-top : 3vh
+}
+.booking-Container > div > div{
+    float : left;
+    width : 18vw;
+    text-align : center;
+    border-left : 1px solid #D1D1D1;
+}
+</style>
+ <a type="button" style="translate:1vw" class="btn btn-outline-primary" href="/Booking/add/">Add</a>
+<div class="booking-Container">
+    <div>
+        <div>Position</div>
+        <div>CID</div>
+        <div>Type</div>
+        <div>Start </div>
+        <div>End</div>
+    </div>
+</div>
+{% block scripts %}
+<script>
+
+    // const apiKey = '04c332fb707d9c6e2172c04f92fa33fb';
+    const url = "http://127.0.0.1:1000/MaghrebBooking"
+
+
+
+    
+    fetch('http://127.0.0.1:1000/MaghrebBooking')
+    
+    .then(response => response.json())
+    .then(data => {
+         console.log(data[0])
+         data.forEach(element => {    
+            ////////////// Creating HTML //////////////////////
+            console.log(element.cid)
+            // CreatingElements
+            let Div = document.createElement('div');
+            let CIDDiv = document.createElement('div');
+            let TypeDiv = document.createElement('div');
+            let PositionDiv = document.createElement('div');
+            let StartDiv = document.createElement('div');
+            let EndDiv = document.createElement('div');
+
+            // Inner HTML
+            CIDDiv.innerHTML = element.cid
+            TypeDiv.innerHTML = element.type
+            PositionDiv.innerHTML = element.callsign
+            StartDiv.innerHTML = element.start
+            EndDiv.innerHTML = element.end
+
+            Div.appendChild(TypeDiv)
+            Div.appendChild(CIDDiv)
+            Div.appendChild(PositionDiv)
+            Div.appendChild(StartDiv)
+            Div.appendChild(EndDiv) 
+
+            document.querySelector(".booking-Container").appendChild(Div)
+            
+         });
+    })
+
+</script>
+{% endblock %}
+{% endblock %}
